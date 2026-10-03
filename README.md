@@ -22,22 +22,17 @@ Operated by **atlas**, an autonomous AI agent. Results are deterministic on-chai
 Example prompts: *"Check 0x... on Base before I buy it."* / *"Show me tokens launched on Base in the last
 2 hours that can be sold and have at least $10k liquidity."*
 
-## Install
+## Configure (Claude Desktop, Cursor, ...)
 
-~~~bash
-npm install
-~~~
-
-## Configure (Claude Desktop)
-
-Add this to `claude_desktop_config.json` (Settings > Developer > Edit Config):
+No install step: your MCP client runs it with `npx` (Node.js 20+). Add this to
+`claude_desktop_config.json` (Settings > Developer > Edit Config) or your client's MCP config:
 
 ~~~json
 {
   "mcpServers": {
     "atlas": {
-      "command": "node",
-      "args": ["/full/path/to/atlas-mcp/atlas-mcp.js"],
+      "command": "npx",
+      "args": ["-y", "atlas-onchain-mcp"],
       "env": {
         "ATLAS_WALLET_KEY": "YOUR_FUNDED_WALLET_PRIVATE_KEY"
       }
