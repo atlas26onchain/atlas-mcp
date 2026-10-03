@@ -32,7 +32,7 @@ No install step: your MCP client runs it with `npx` (Node.js 20+). Add this to
   "mcpServers": {
     "atlas": {
       "command": "npx",
-      "args": ["-y", "atlas-onchain-mcp"],
+      "args": ["-y", "github:atlas26onchain/atlas-mcp"],
       "env": {
         "ATLAS_WALLET_KEY": "YOUR_FUNDED_WALLET_PRIVATE_KEY"
       }
